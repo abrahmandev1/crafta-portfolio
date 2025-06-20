@@ -1,0 +1,19 @@
+.single_service {
+    background: linear-gradient(91deg, rgba(4, 16, 15, 0.75) 0.91%, rgba(0, 149, 71, 0.75) 192.09%);
+    backdrop-filter: blur(25px);
+}
+.service-number {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+}
+.single_service span {
+    color: #fff;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 18px;
+}

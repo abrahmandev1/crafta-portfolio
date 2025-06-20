@@ -1,0 +1,21 @@
+// This is the main SCSS file that imports all other SCSS files.
+// It is compiled into a single CSS file for production.
+$white: #fff;
+$black: #000;
+$dark: #191A23;
+$light: #f4f4f4;
+$primary: #30FF93;
+$bg1: #FF7448;
+$bg2: #0F0264;
+$bg3: #FFD028;
+$bg4: #09A8DA;
+$bg5: #780EFF;
+$bg6: #0F0933;
+
+$gradientbg: 'linear-gradient(90deg, #041110 0%, #1C7770 100%)';
+
+// _variables for responsive
+$breakpoint-sm: 767px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 991px;
+$breakpoint-xl: 1199px;
