@@ -37,12 +37,18 @@
                 <div class="rounded-4 p-3 w-75 hero_image">
                     <img src="assets/img/hero-img.png" class="img-fluid rounded-4 mb-3" alt="Joniba Smith">
                     <h3 class="text-center">Joniba Smith</h3>
-                    <p class="text-success text-center">Senior Product Designer</p>
+                    <p class="text-center">Senior Product Designer</p>
                 </div>
 
-                <button id="themeToggle" class="theme-toggle">
-                    <i class="fas fa-sun"></i>
-                </button>
+                <div class="theme-switch">
+                    <input type="checkbox" id="themeToggle" />
+                    <label for="themeToggle" class="switch-label">
+                        <span class="icon moon"><i class="fas fa-moon"></i></span>
+                        <span class="icon sun"><i class="fas fa-sun"></i></span>
+                        <span class="switch-ball"></span>
+                    </label>
+                </div>
+
 
                 <div class="d-flex flex-column gap-3 mt-4 social_icon">
                     <a href="#" class="bg-4"><img src="assets/img/social-icons/facebook.svg" alt=""></a>
@@ -58,25 +64,46 @@
                 <div id="menu-item" class="row h-100 g-0 position-absolute w-100 transition-left z-1">
                     <div
                         class="col-6 menu_list_item aboutBtn d-flex justify-content-center align-items-center bg-1 text-white fw-bold fs-5">
-                        ABOUT ME</div>
+                        <span>
+                            <span class="text-1">ABOUT ME</span>
+                            <span class="text-2">ABOUT ME</span>
+                        </span>
+                    </div>
                     <div
                         class="col-6 menu_list_item serviceBtn d-flex justify-content-center align-items-center bg-2 text-white fw-bold fs-5">
-                        MY SERVICES</div>
+                        <span>
+                            <span class="text-1">MY SERVICES</span>
+                            <span class="text-2">MY SERVICES</span>
+                        </span>
+                    </div>
                     <div
                         class="col-6 menu_list_item careerBtn d-flex justify-content-center align-items-center bg-3 text-white fw-bold fs-5">
-                        MY CAREER
+                        <span>
+                            <span class="text-1">MY CAREER</span>
+                            <span class="text-2">MY CAREER</span>
+                        </span>
                     </div>
                     <div
                         class="col-6 menu_list_item folioBtn d-flex justify-content-center align-items-center bg-4 text-white fw-bold fs-5">
-                        MY FOLIO
+                        <span>
+                            <span class="text-1">MY FOLIO</span>
+                            <span class="text-2">MY FOLIO</span>
+                        </span>
                     </div>
                     <div
                         class="col-6 menu_list_item clientBtn d-flex justify-content-center align-items-center bg-5 text-white fw-bold fs-5">
-                        MY CLIENTS
+                        <span>
+                            <span class="text-1">MY CLIENTS</span>
+                            <span class="text-2">MY CLIENTS</span>
+                        </span>
                     </div>
                     <div
                         class="col-6 menu_list_item contactBtn d-flex justify-content-center align-items-center bg-6 text-white fw-bold fs-5">
-                        CONTACT ME</div>
+                        <span>
+                            <span class="text-1">CONTACT ME</span>
+                            <span class="text-2">CONTACT ME</span>
+                        </span>
+                    </div>
                 </div>
 
 
@@ -103,8 +130,19 @@
                     </div>
 
                     <div class="mt-4 d-flex gap-3">
-                        <a href="#" class="main_btn">Download CV</a>
-                        <a href="#" class="main_btn secondary_btn">My Services</a>
+                        <a href="#" class="main_btn">
+                            <span>
+                                <span class="text-1">Download CV</span>
+                                <span class="text-2">Download CV</span>
+                            </span>
+                        </a>
+
+                        <a href="#" class="main_btn secondary_btn">
+                            <span>
+                                <span class="text-1">My Services</span>
+                                <span class="text-2">My Services</span>
+                            </span>
+                        </a>
                     </div>
 
                     <h5 class="mt-5 mb-3 fw-bold">MY DESIGN TOOLS</h5>
@@ -170,7 +208,7 @@
                             <div class="timeline-item left">
                                 <div class="content timebg-1">
                                     <h6 class="fw-bold mb-2">Lead Product Designer</h6>
-                                    <p class="text-success mb-0">The King Soft - March 2022 to Present</p>
+                                    <p class="mb-0">The King Soft - March 2022 to Present</p>
                                 </div>
                             </div>
 
@@ -178,7 +216,7 @@
                             <div class="timeline-item right">
                                 <div class="content timebg-2">
                                     <h6 class="fw-bold mb-2">Lead Product Designer</h6>
-                                    <p class="text-success mb-0">The Startech - March 2019 to 2020</p>
+                                    <p class="mb-0">The Startech - March 2019 to 2020</p>
                                 </div>
                             </div>
 
@@ -186,7 +224,7 @@
                             <div class="timeline-item left">
                                 <div class="content timebg-1">
                                     <h6 class="fw-bold mb-2">Lead Product Designer</h6>
-                                    <p class="text-success mb-0">The Pointech - Jun 2018 to 2020</p>
+                                    <p class="mb-0">The Pointech - Jun 2018 to 2020</p>
                                 </div>
                             </div>
 
@@ -194,7 +232,7 @@
                             <div class="timeline-item right">
                                 <div class="content timebg-2">
                                     <h6 class="fw-bold mb-2">Lead Product Designer</h6>
-                                    <p class="text-success mb-0">The Miro Soft - Jan 2016 to Dec 2018</p>
+                                    <p class="mb-0">The Miro Soft - Jan 2016 to Dec 2018</p>
                                 </div>
                             </div>
 
@@ -274,7 +312,12 @@
 
                                 <!-- Button -->
                                 <div class="mt-4 d-flex justify-content-center">
-                                    <a href="#" class="main_btn">Start Your Project</a>
+                                    <a href="#" class="main_btn">
+                                        <span>
+                                            <span class="text-1">Start Your Project</span>
+                                            <span class="text-2">Start Your Project</span>
+                                        </span>
+                                    </a>
                                 </div>
 
                             </div>
@@ -301,7 +344,13 @@
                                 <input type="text" placeholder="Subject" />
                             </div>
                             <textarea placeholder="Product Discription"></textarea>
-                            <button type="submit" class="send-btn">SEND MESSAGE</button>
+
+                            <button type="submit" class="main_btn ct_btn">
+                                <span>
+                                    <span class="text-1">Send Message</span>
+                                    <span class="text-2">Send Message</span>
+                                </span>
+                            </button>
                         </form>
 
                         <div class="contact-info-bar">

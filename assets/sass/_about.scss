@@ -1,31 +1,32 @@
+.slide-panel {
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 
-/* Paragraph text */
-.slide-panel p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Contact details */
-.slide-panel strong {
-  color: #ffffff;
-  font-weight: 600;
-}
-.light-mode .slide-panel strong {
-  color: #111;
-}
-
-
-
-
-/* Tool icons (Figma, PS, XD, AI) */
-.slide-panel .skills_icon img{
-  transition: transform 0.2s ease;
-  margin-right: 10px;
-}
-.slide-panel .skills_icon img:hover {
-  transform: scale(1.1);
-}
-.slide-panel strong {
+  strong {
     color: #ffffff;
     font-weight: 600;
+  }
+
+  .skills_icon {
+    img {
+      transition: transform 0.2s ease;
+      margin-right: 10px;
+      max-height: 50px;
+      margin-top: 10px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.light-mode {
+  .slide-panel {
+    strong {
+      color: #111;
+    }
+  }
 }

@@ -29,15 +29,15 @@
 
 /* Center vertical line */
 .timeline-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    height: 76%;
-    width: 2px;
-    background: #00ff99;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  height: 76%;
+  width: 2px;
+  background: #00ff99;
+  transform: translateX(-50%);
 }
 
 /* Timeline item structure */
@@ -99,17 +99,3 @@
   transform: translateX(-50%);
 }
 
-/* Responsive fix */
-@media (max-width: 768px) {
-  .timeline-item .content {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center;
-  }
-
-  .timeline-item.left::after,
-  .timeline-item.right::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}

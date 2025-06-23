@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   color: #fff;
   transition: background-color 0.5s ease, color 0.5s ease;
-   border-top: 0 solid transparent;
+  border-top: 0 solid transparent;
   transition: border-top 0.4s ease;
 
   // Also apply transition to child containers if needed
@@ -71,49 +71,98 @@ body {
     }
   }
 }
-body.light-mode #aboutPanel{
-  border-top: 4px solid $bg1; 
-}
-body.light-mode #servicePanel{
-  border-top: 4px solid $bg2; 
-}
-body.light-mode #careerPanel{
-  border-top: 4px solid $bg3; 
-}
-body.light-mode #folioPanel{
-  border-top: 4px solid $bg4; 
-}
-body.light-mode #clientPanel{
-  border-top: 4px solid $bg5; 
-}
-body.light-mode #contactPanel{
-  border-top: 4px solid $bg6; 
-}
-button#themeToggle {
-  width: 50px;
-  height: 50px;
-  line-height: 30px;
-  color: #16874e;
-  background: #ffffff;
-  display: block;
-  border-radius: 30px;
-  border: none;
-  font-size: 18px;
-  transition: all 0.3s ease;
+
+body.light-mode #aboutPanel {
+  border-top: 4px solid $bg1;
 }
 
+body.light-mode #servicePanel {
+  border-top: 4px solid $bg2;
+}
 
-.theme-toggle {
+body.light-mode #careerPanel {
+  border-top: 4px solid $bg3;
+}
+
+body.light-mode #folioPanel {
+  border-top: 4px solid $bg4;
+}
+
+body.light-mode #clientPanel {
+  border-top: 4px solid $bg5;
+}
+
+body.light-mode #contactPanel {
+  border-top: 4px solid $bg6;
+}
+
+// Theme switch styles
+.theme-switch {
   position: fixed;
-  top: 20px;
+  bottom: 20px;
   right: 20px;
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  color: #00ff88;
-  cursor: pointer;
   z-index: 999;
+
+  width: 120px;
+  height: 50px;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .switch-label {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+
+  .icon {
+    font-size: 18px;
+    z-index: 1;
+    color: #111;
+  }
+
+  .moon {
+    color: #fff;
+  }
+
+  .switch-ball {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(270deg, #B3FF7C 0%, #31FF92 100%);
+    border-radius: 50%;
+    transition: left 0.3s ease, background-color 0.3s ease;
+    z-index: 0;
+  }
+
+  input:checked+.switch-label {
+    background: linear-gradient(270deg, #B3FF7C 0%, #31FF92 100%);
+
+    .sun {
+      color: #111;
+    }
+
+    .moon {
+      color: #fff;
+    }
+
+    .switch-ball {
+      left: 75px;
+      background: #fff;
+    }
+  }
 }
+
 
 h1,
 h2,

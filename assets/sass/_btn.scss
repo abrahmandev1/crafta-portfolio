@@ -1,21 +1,63 @@
 .main_btn {
     margin-top: 20px;
     background: linear-gradient(270deg, #B3FF7C 0%, #31FF92 100%);
-    background-size: 200% 100%; // Allows the gradient to shift
-    background-position: right center; // Start position
+    background-size: 200% 100%;
+    background-position: right center;
     border: none;
+    font-size: 16px;
+    line-height: 19px;
     color: #000;
     font-weight: bold;
     padding: 12px 40px;
-    border-radius: 25px;
-    cursor: pointer;
+    display: inline-block;
+    border-radius: 30px;
     transition: background-position 0.4s ease-in-out;
 
-    &:hover {
-        background-position: left center; // Shifts gradient to left
-    }
 }
-.secondary_btn{
+
+.ct_btn {
+    width: 100%;
+}
+
+.main_btn:hover {
+    background-position: left center;
+}
+
+
+.main_btn span {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.main_btn span .text-1,
+.main_btn span .text-2 {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.main_btn span .text-1 {
+    transform: translateY(0);
+}
+
+.main_btn span .text-2 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(0);
+}
+
+.main_btn:hover span .text-1 {
+    transform: translateY(-150%);
+}
+
+.main_btn:hover span .text-2 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.secondary_btn {
     border: 1px solid #B3FF7C;
     color: #fff;
     background: transparent;
@@ -26,6 +68,7 @@
         color: #000;
     }
 }
+
 .light-mode .secondary_btn {
     color: #000;
 }

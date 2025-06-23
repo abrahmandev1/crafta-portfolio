@@ -1,7 +1,41 @@
 .menu_list_item {
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
+
+.menu_list_item span {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu_list_item span .text-1,
+.menu_list_item span .text-2 {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.menu_list_item span .text-1 {
+    transform: translateY(0);
+}
+
+.menu_list_item span .text-2 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(0);
+}
+
+.menu_list_item:hover span .text-1 {
+    transform: translateY(-150%);
+}
+
+.menu_list_item:hover span .text-2 {
+    top: 50%;
+    transform: translateY(-50%);
+}
 .bg-1{
     background: $bg1;
 }

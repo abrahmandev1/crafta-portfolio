@@ -84,21 +84,18 @@ lightbox.option({
 });
 
 // Theme Toggle Functionality
-const toggleBtn = document.getElementById('themeToggle');
+const toggleCheckbox = document.getElementById('themeToggle');
 const logo = document.getElementById('siteLogo');
 
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
+// Apply theme on toggle
+toggleCheckbox.addEventListener('change', () => {
+  const islight = toggleCheckbox.checked;
 
-  const icon = toggleBtn.querySelector('i');
-  icon.classList.toggle('fa-sun');
-  icon.classList.toggle('fa-moon');
+  // Toggle body class
+  document.body.classList.toggle('light-mode' , islight);
 
-  // Check if light mode is active
-  const isLight = document.body.classList.contains('light-mode');
-
-  // Switch logo based on theme
-  logo.src = isLight ? 'assets/img/logo-light.svg' : 'assets/img/logo-dark.svg';
+  // Update logo
+  logo.src = islight ? 'assets/img/logo-light.svg' : 'assets/img/logo-dark.svg';
 });
 
 /*PRELOADER JS*/

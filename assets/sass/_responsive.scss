@@ -1,4 +1,50 @@
+
+
+@media (max-width: 991px) {
+    .social_icon {
+        position: absolute;
+        left: 20px;
+        top: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .social_icon {
+        position: absolute;
+        left: 15px;
+        top: 30%;
+    }
+
+    .social_icon a {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    .timeline-item .content {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+    }
+
+    .timeline-item.left::after,
+    .timeline-item.right::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 @media only screen and (max-width: 767px) {
+    .social_icon {
+        position: absolute;
+        left: 20px;
+    }
+
     #menu-item {
         position: relative !important;
         top: 0;
@@ -9,3 +55,4 @@
         transition: left 0.5s ease-in-out;
     }
 }
+
