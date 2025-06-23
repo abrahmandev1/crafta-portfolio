@@ -1,21 +1,4 @@
-.bg-1{
-    background: $bg1;
-}
-.bg-2{
-    background: $bg2;
-}
-.bg-3{
-    background: $bg3;
-}
-.bg-4{
-    background: $bg4;
-}
-.bg-5{
-    background: $bg5;
-}
-.bg-6{
-    background: $bg6;
-}
+
 .logo {
 	margin-bottom: 50px !important;
 	margin-left: 30px;
@@ -26,15 +9,15 @@
 .social_icon {
     position: absolute;
     left: 25px;
-    top: 45%;
+    top: 30%;
 }
 .social_icon a {
-	width: 45px;
-	height: 45px;
-	font-size: 14px;
-	line-height: 55px;
-	text-align: center;
-	display: inline-block;
-	border-radius: 5px;
-	margin-bottom: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+    line-height: 45px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }

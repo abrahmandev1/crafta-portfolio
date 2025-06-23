@@ -66,7 +66,6 @@ $info-color: #c0c0c0;
 
     }
 
-
     .contact-info-bar {
         display: flex;
         /* justify-content: center; */
@@ -110,4 +109,22 @@ $info-color: #c0c0c0;
         }
     }
 
+}
+footer {
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 60px;
+}
+.light-mode footer{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.light-mode .contact-form input,
+.light-mode .contact-form textarea {
+    background: #fff;
+    border: 1px solid rgb(78 78 78 / 20%);
+    color: #111;
+}
+
+.light-mode .contact-info-bar .label {
+    color: #111 !important;
 }

@@ -2,6 +2,8 @@
 // This is the main SCSS file that imports all other SCSS files.
 @import "variables";
 @import "reset";
+@import "preloader";
+@import "btn";
 @import "hero";
 @import "menu";
 @import "about";

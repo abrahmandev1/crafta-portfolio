@@ -1,0 +1,22 @@
+.main_btn {
+    margin-top: 20px;
+    background: linear-gradient(270deg, #B3FF7C 0%, #31FF92 100%);
+    background-size: 200% 100%; // Allows the gradient to shift
+    background-position: right center; // Start position
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-position 0.4s ease-in-out;
+
+    &:hover {
+        background-position: left center; // Shifts gradient to left
+    }
+}
+.btn-secondary {
+    background: transparent;
+    padding: 12px 40px;
+    border-radius: 25px;
+}

@@ -13,6 +13,106 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
+  transition: background-color 0.5s ease, color 0.5s ease;
+   border-top: 0 solid transparent;
+  transition: border-top 0.4s ease;
+
+  // Also apply transition to child containers if needed
+  * {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  &.light-mode {
+    background-image: none;
+    background-color: #fff !important;
+    color: #111;
+    transition: color 0.5s ease;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #111 !important;
+    }
+
+    p {
+      color: #777777 !important;
+    }
+
+    .back_btn {
+      color: #111;
+    }
+
+    #siteLogo {
+      transition: opacity 0.2s ease;
+    }
+
+    .hero_image h3 {
+      color: #111;
+    }
+
+    button#themeToggle {
+      background: linear-gradient(91deg, rgba(4, 16, 15, 0.75) 0.91%, rgba(0, 149, 71, 0.75) 192.09%);
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+      color: #ffffff;
+    }
+
+    #menu-item {
+      transition: left 0.5s ease-in-out;
+    }
+
+    .slide-panel {
+      background-color: #fff;
+      transition: right 0.5s ease-in-out;
+
+    }
+  }
+}
+body.light-mode #aboutPanel{
+  border-top: 4px solid $bg1; 
+}
+body.light-mode #servicePanel{
+  border-top: 4px solid $bg2; 
+}
+body.light-mode #careerPanel{
+  border-top: 4px solid $bg3; 
+}
+body.light-mode #folioPanel{
+  border-top: 4px solid $bg4; 
+}
+body.light-mode #clientPanel{
+  border-top: 4px solid $bg5; 
+}
+body.light-mode #contactPanel{
+  border-top: 4px solid $bg6; 
+}
+button#themeToggle {
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  color: #16874e;
+  background: #ffffff;
+  display: block;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #00ff88;
+  cursor: pointer;
+  z-index: 999;
 }
 
 h1,
@@ -24,19 +124,24 @@ h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
+
 li {
   list-style: none;
 }
+
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Menu container positioning */
 /* Menu container positioning */
 #menu-item {
-  position: absolute; /* Make it layerable */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -60,22 +165,20 @@ a {
   transition: right 0.5s ease-in-out;
   z-index: 2;
   overflow-y: auto;
-  background-color: transparent; /* Optional: consistent background */
-}
 
-/* Slide-in effect */
-.slide-panel.active {
-  right: 0;
+  &.active {
+    right: 0;
+  }
 }
 
 /* Responsive fix for menu buttons */
-#menu-item > div {
+#menu-item>div {
   padding: 20px;
   min-height: 120px;
 }
 
 
-.back_btn{
+.back_btn {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -88,40 +191,14 @@ a {
   letter-spacing: 1px;
 }
 
-/* Paragraph text */
-.slide-panel p {
-  font-size: 16px;
-  line-height: 1.6;
-}
 
-/* Contact details */
-.slide-panel strong {
-  color: #ffffff;
-  font-weight: 600;
-}
-
-
-/* Buttons */
-.slide-panel .btn-success {
-  background-color: #28c76f;
-  border: none;
-}
-
-.slide-panel .btn-secondary {
-  background-color: #6c757d;
-  border: none;
-}
-
-.slide-panel .btn {
-  font-weight: 600;
-  padding: 8px 24px;
-}
 
 /* Back link */
 #closeAbout {
   font-size: 14px;
   transition: color 0.3s ease;
 }
+
 #closeAbout:hover {
   color: #28c76f;
 }
@@ -130,6 +207,7 @@ a {
 .slide-panel::-webkit-scrollbar {
   width: 6px;
 }
+
 .slide-panel::-webkit-scrollbar-thumb {
   background: #444;
   border-radius: 10px;

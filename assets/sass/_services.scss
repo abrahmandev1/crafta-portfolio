@@ -2,6 +2,10 @@
     background: linear-gradient(91deg, rgba(4, 16, 15, 0.75) 0.91%, rgba(0, 149, 71, 0.75) 192.09%);
     backdrop-filter: blur(25px);
 }
+.light-mode .single_service {
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+}
 .service-number {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -16,4 +20,7 @@
     margin-left: 20px;
     font-weight: 600;
     font-size: 18px;
+}
+.light-mode .single_service span {
+    color: #111;
 }

@@ -1,3 +1,22 @@
+
+/* Paragraph text */
+.slide-panel p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Contact details */
+.slide-panel strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+.light-mode .slide-panel strong {
+  color: #111;
+}
+
+
+
+
 /* Tool icons (Figma, PS, XD, AI) */
 .slide-panel .skills_icon img{
   transition: transform 0.2s ease;
@@ -5,4 +24,8 @@
 }
 .slide-panel .skills_icon img:hover {
   transform: scale(1.1);
+}
+.slide-panel strong {
+    color: #ffffff;
+    font-weight: 600;
 }

@@ -12,6 +12,100 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  border-top: 0 solid transparent;
+  transition: border-top 0.4s ease;
+}
+body * {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+body.light-mode {
+  background-image: none;
+  background-color: #fff !important;
+  color: #111;
+  transition: color 0.5s ease;
+}
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+  color: #111 !important;
+}
+body.light-mode p {
+  color: #777777 !important;
+}
+body.light-mode .back_btn {
+  color: #111;
+}
+body.light-mode #siteLogo {
+  transition: opacity 0.2s ease;
+}
+body.light-mode .hero_image h3 {
+  color: #111;
+}
+body.light-mode button#themeToggle {
+  background: linear-gradient(91deg, rgba(4, 16, 15, 0.75) 0.91%, rgba(0, 149, 71, 0.75) 192.09%);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  color: #ffffff;
+}
+body.light-mode #menu-item {
+  transition: left 0.5s ease-in-out;
+}
+body.light-mode .slide-panel {
+  background-color: #fff;
+  transition: right 0.5s ease-in-out;
+}
+
+body.light-mode #aboutPanel {
+  border-top: 4px solid #FF7448;
+}
+
+body.light-mode #servicePanel {
+  border-top: 4px solid #0F0264;
+}
+
+body.light-mode #careerPanel {
+  border-top: 4px solid #FFD028;
+}
+
+body.light-mode #folioPanel {
+  border-top: 4px solid #09A8DA;
+}
+
+body.light-mode #clientPanel {
+  border-top: 4px solid #780EFF;
+}
+
+body.light-mode #contactPanel {
+  border-top: 4px solid #0F0933;
+}
+
+button#themeToggle {
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  color: #16874e;
+  background: #ffffff;
+  display: block;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #00ff88;
+  cursor: pointer;
+  z-index: 999;
 }
 
 h1,
@@ -38,8 +132,9 @@ a {
 }
 
 /* Menu container positioning */
+/* Menu container positioning */
 #menu-item {
-  position: absolute; /* Make it layerable */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -63,10 +158,7 @@ a {
   transition: right 0.5s ease-in-out;
   z-index: 2;
   overflow-y: auto;
-  background-color: transparent; /* Optional: consistent background */
 }
-
-/* Slide-in effect */
 .slide-panel.active {
   right: 0;
 }
@@ -90,34 +182,6 @@ a {
   letter-spacing: 1px;
 }
 
-/* Paragraph text */
-.slide-panel p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Contact details */
-.slide-panel strong {
-  color: #ffffff;
-  font-weight: 600;
-}
-
-/* Buttons */
-.slide-panel .btn-success {
-  background-color: #28c76f;
-  border: none;
-}
-
-.slide-panel .btn-secondary {
-  background-color: #6c757d;
-  border: none;
-}
-
-.slide-panel .btn {
-  font-weight: 600;
-  padding: 8px 24px;
-}
-
 /* Back link */
 #closeAbout {
   font-size: 14px;
@@ -136,6 +200,106 @@ a {
 .slide-panel::-webkit-scrollbar-thumb {
   background: #444;
   border-radius: 10px;
+}
+
+.preloader {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: linear-gradient(270deg, #B3FF7C 0%, #31FF92 100%);
+  z-index: 99999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  font-size: 10px;
+  text-indent: -12345px;
+  z-index: 10000;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  animation-delay: -1s;
+}
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+.main_btn {
+  margin-top: 20px;
+  background: linear-gradient(270deg, #B3FF7C 0%, #31FF92 100%);
+  background-size: 200% 100%;
+  background-position: right center;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-position 0.4s ease-in-out;
+}
+.main_btn:hover {
+  background-position: left center;
+}
+
+.btn-secondary {
+  background: transparent;
+  padding: 12px 40px;
+  border-radius: 25px;
+}
+
+.logo {
+  margin-bottom: 50px !important;
+  margin-left: 30px;
+}
+
+.hero_image {
+  position: relative;
+}
+
+.social_icon {
+  position: absolute;
+  left: 25px;
+  top: 30%;
+}
+
+.social_icon a {
+  width: 45px;
+  height: 45px;
+  font-size: 14px;
+  line-height: 45px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.menu_list_item {
+  cursor: pointer;
 }
 
 .bg-1 {
@@ -162,34 +326,20 @@ a {
   background: #0F0933;
 }
 
-.logo {
-  margin-bottom: 50px !important;
-  margin-left: 30px;
+/* Paragraph text */
+.slide-panel p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-.hero_image {
-  position: relative;
+/* Contact details */
+.slide-panel strong {
+  color: #ffffff;
+  font-weight: 600;
 }
 
-.social_icon {
-  position: absolute;
-  left: 25px;
-  top: 45%;
-}
-
-.social_icon a {
-  width: 45px;
-  height: 45px;
-  font-size: 14px;
-  line-height: 55px;
-  text-align: center;
-  display: inline-block;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.menu_list_item {
-  cursor: pointer;
+.light-mode .slide-panel strong {
+  color: #111;
 }
 
 /* Tool icons (Figma, PS, XD, AI) */
@@ -202,10 +352,20 @@ a {
   transform: scale(1.1);
 }
 
+.slide-panel strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
 .single_service {
   background: linear-gradient(91deg, rgba(4, 16, 15, 0.75) 0.91%, rgba(0, 149, 71, 0.75) 192.09%);
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
+}
+
+.light-mode .single_service {
+  background: #FFF;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .service-number {
@@ -225,6 +385,10 @@ a {
   font-size: 18px;
 }
 
+.light-mode .single_service span {
+  color: #111;
+}
+
 .timeline-wrapper {
   position: relative;
   overflow: hidden;
@@ -232,14 +396,26 @@ a {
 
 .timebg-1 {
   background: linear-gradient(91deg, rgba(4, 16, 15, 0.75) 0.91%, rgba(0, 149, 71, 0.75) 192.09%);
-  -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: 50px 10px;
+}
+
+.light-mode .timebg-1 {
+  background: #FFF;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .timebg-2 {
   background: linear-gradient(91deg, rgba(0, 149, 71, 0.75) 0.84%, rgba(4, 16, 15, 0.75) 99.16%);
-  -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: 50px 10px;
+}
+
+.light-mode .timebg-2 {
+  background: #FFF;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Center vertical line */
@@ -249,7 +425,7 @@ a {
   top: 0;
   bottom: 0;
   left: 50%;
-  height: 78%;
+  height: 76%;
   width: 2px;
   background: #00ff99;
   transform: translateX(-50%);
@@ -260,6 +436,7 @@ a {
   width: 100%;
   position: relative;
   margin-bottom: 60px;
+  padding: 0 15px;
 }
 
 .timeline-item .content {
@@ -284,10 +461,15 @@ a {
   z-index: 1;
 }
 
+.light-mode .timeline-item::after {
+  background: #00ff99;
+  border: 2px solid rgba(0, 63, 47, 0.26);
+}
+
 /* Left item */
 .timeline-item.left .content {
   position: relative;
-  margin-left: 0;
+  padding-left: 40px;
   margin-right: auto;
 }
 
@@ -299,7 +481,7 @@ a {
 /* Right item */
 .timeline-item.right .content {
   position: relative;
-  margin-right: 0;
+  padding-left: 40px;
   margin-left: auto;
 }
 
@@ -549,6 +731,27 @@ a {
 .contact-section .info-box .info-text .value {
   font-size: 14px;
   color: #c0c0c0;
+}
+
+footer {
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 60px;
+}
+
+.light-mode footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .contact-form input,
+.light-mode .contact-form textarea {
+  background: #fff;
+  border: 1px solid rgba(78, 78, 78, 0.2);
+  color: #111;
+}
+
+.light-mode .contact-info-bar .label {
+  color: #111 !important;
 }
 
 @media only screen and (max-width: 767px) {

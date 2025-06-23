@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Crafta | Personal/Resume Portfolio HTML Template</title>
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/png">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/lightbox.min.css">
@@ -16,12 +16,23 @@
 </head>
 
 <body>
+    <!-- START PRELOADER -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!-- END PRELOADER -->
+
     <div class="container-fluid">
         <div class="row h-100">
 
             <!-- Left Column -->
             <div class="col-md-6 col-sm-12 text-white d-flex flex-column align-items-center py-5">
-                <a href="index.html" class="mb-4 logo align-self-start"><img src="assets/img/logo.svg" alt=""></a>
+                <a href="index.html" class="mb-4 logo align-self-start"><img id="siteLogo"
+                        src="assets/img/logo-dark.svg" alt="Logo"></a>
+
 
                 <div class="rounded-4 p-3 w-75 hero_image">
                     <img src="assets/img/hero-img.png" class="img-fluid rounded-4 mb-3" alt="Joniba Smith">
@@ -29,12 +40,17 @@
                     <p class="text-success text-center">Senior Product Designer</p>
                 </div>
 
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+
                 <div class="d-flex flex-column gap-3 mt-4 social_icon">
-                    <a href="#" class="bg-4"><i class="fab fa-facebook fa-2x text-white"></i></a>
-                    <a href="#" class="bg-5"><i class="fab fa-instagram fa-2x text-white"></i></a>
-                    <a href="#" class="bg-3"><i class="fab fa-linkedin fa-2x text-white"></i></a>
-                    <a href="#" class="bg-1"><i class="fab fa-twitter fa-2x text-white"></i></a>
+                    <a href="#" class="bg-4"><img src="assets/img/social-icons/facebook.svg" alt=""></a>
+                    <a href="#" class="bg-5"><img src="assets/img/social-icons/instagram.svg" alt=""></a>
+                    <a href="#" class="bg-3"><img src="assets/img/social-icons/linkedin.svg" alt=""></a>
+                    <a href="#" class="bg-1"><img src="assets/img/social-icons/twitter.svg" alt=""></a>
                 </div>
+
             </div>
 
             <!-- Right Column -->
@@ -72,7 +88,7 @@
                                 src="assets/img/icon_back.svg" alt=""> Back</a>
                     </div>
 
-                    <p class="text-white">
+                    <p class="text-white animate__animated animate__fadeIn">
                         Deskboard Labs is a small design and development team based in BanikON with a passion to help
                         businesses grow. With our web development and marketing expertise, your business will begin to
                         see more conversions, sales, and brand recognition.
@@ -87,7 +103,7 @@
                     </div>
 
                     <div class="mt-4 d-flex gap-3">
-                        <a href="#" class="btn btn-success rounded-pill px-4 fw-bold">Download CV</a>
+                        <a href="#" class="main_btn btn-success">Download CV</a>
                         <a href="#" class="btn btn-secondary rounded-pill px-4 fw-bold">My Services</a>
                     </div>
 
@@ -162,7 +178,7 @@
                             <div class="timeline-item right">
                                 <div class="content timebg-2">
                                     <h6 class="fw-bold mb-2">Lead Product Designer</h6>
-                                    <p class="text-success mb-0">The King Soft - 2020 to 2022</p>
+                                    <p class="text-success mb-0">The Startech - March 2019 to 2020</p>
                                 </div>
                             </div>
 
@@ -170,7 +186,7 @@
                             <div class="timeline-item left">
                                 <div class="content timebg-1">
                                     <h6 class="fw-bold mb-2">Lead Product Designer</h6>
-                                    <p class="text-success mb-0">The King Soft - 2018 to 2020</p>
+                                    <p class="text-success mb-0">The Pointech - Jun 2018 to 2020</p>
                                 </div>
                             </div>
 
@@ -178,7 +194,7 @@
                             <div class="timeline-item right">
                                 <div class="content timebg-2">
                                     <h6 class="fw-bold mb-2">Lead Product Designer</h6>
-                                    <p class="text-success mb-0">The King Soft - 2016 to 2018</p>
+                                    <p class="text-success mb-0">The Miro Soft - Jan 2016 to Dec 2018</p>
                                 </div>
                             </div>
 
@@ -311,6 +327,12 @@
                                 </div>
                             </div>
                         </div>
+
+                        <footer>
+                            <div class="text-center mt-4">
+                                <p class="mb-0">© 2025 Crafta. All rights reserved.</p>
+                            </div>
+                        </footer>
 
                     </div>
                 </section>
