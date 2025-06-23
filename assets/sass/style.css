@@ -266,10 +266,19 @@ a {
   background-position: left center;
 }
 
-.btn-secondary {
+.secondary_btn {
+  border: 1px solid #B3FF7C;
+  color: #fff;
   background: transparent;
-  padding: 12px 40px;
-  border-radius: 25px;
+  transition: all 0.3s ease !important;
+}
+.secondary_btn:hover {
+  background: linear-gradient(270deg, #B3FF7C 0%, #31FF92 100%);
+  color: #000;
+}
+
+.light-mode .secondary_btn {
+  color: #000;
 }
 
 .logo {
