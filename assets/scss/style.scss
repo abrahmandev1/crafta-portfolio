@@ -1,9 +1,23 @@
+/*!
+ * Template Name: Crafta - Personal/Resume Portfolio HTML Template
+ * Author: https://themeforest.net/user/anexatheme
+ * Version: 1.0
+ * Created: July 2025
+ * License: ThemeForest Regular / Extended License
+ */
 
 // This is the main SCSS file that imports all other SCSS files.
+
+// 01. Variables
 @import "variables";
+
+// 02. Base
 @import "reset";
 @import "preloader";
 @import "btn";
+
+
+// 03. Components
 @import "hero";
 @import "menu";
 @import "about";
@@ -12,4 +26,6 @@
 @import "portfolio";
 @import "clients";
 @import "contact";
+
+// 04. Extras
 @import "responsive";

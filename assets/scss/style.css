@@ -1,4 +1,38 @@
+/*!
+ * Template Name: Crafta - Personal/Resume Portfolio HTML Template
+ * Author: https://themeforest.net/user/anexatheme
+ * Version: 1.0
+ * Created: July 2025
+ * License: ThemeForest Regular / Extended License
+ */
+
+/* ----------------------------------------------------------------
+  [Table of Contents]
+
+  01. General Styles
+  02. Typography
+  03. Preloader
+  04. Buttons
+  05. Menu and Panels
+  06. Hero Section
+  07. About Section
+  08. Services Section
+  09. Career Section
+  10. Portfolio Section
+  11. Client Section
+  12. Contact Section
+  13. Footer Section
+  14. Responsive (Media Queries)
+------------------------------------------------------------------- */
+
+/* Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+/* ===============================
+   01. General Styles
+================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -139,6 +173,11 @@ body.light-mode #contactPanel {
   background: #fff;
 }
 
+
+/* ===============================
+   02. Typography
+================================== */
+
 h1,
 h2,
 h3,
@@ -162,76 +201,10 @@ a {
   color: inherit;
 }
 
-/* Menu container positioning */
-/* Menu container positioning */
-#menu-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: left 0.5s ease-in-out;
-}
 
-/* Hide menu by sliding it out to the left */
-#menu-item.hide {
-  left: -100%;
-}
-
-/* Panel default position: off-screen to the right */
-.slide-panel {
-  position: absolute;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100%;
-  transition: right 0.5s ease-in-out;
-  z-index: 2;
-  overflow-y: auto;
-}
-.slide-panel.active {
-  right: 0;
-}
-
-/* Responsive fix for menu buttons */
-#menu-item > div {
-  padding: 20px;
-  min-height: 120px;
-}
-
-.back_btn {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* Headings */
-.slide-panel h4,
-.slide-panel h5 {
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-/* Back link */
-#closeAbout {
-  font-size: 14px;
-  transition: color 0.3s ease;
-}
-
-#closeAbout:hover {
-  color: #28c76f;
-}
-
-/* Scrollbar (optional for cleaner scroll) */
-.slide-panel::-webkit-scrollbar {
-  width: 6px;
-}
-
-.slide-panel::-webkit-scrollbar-thumb {
-  background: #444;
-  border-radius: 10px;
-}
+/* ===============================
+   03. Preloader
+================================== */
 
 .preloader {
   bottom: 0;
@@ -280,6 +253,11 @@ a {
     -webkit-transform: scale(1);
   }
 }
+
+
+/* ===============================
+   04. Buttons
+================================== */
 .main_btn {
   margin-top: 20px;
   background: linear-gradient(270deg, #B3FF7C 0%, #31FF92 100%);
@@ -351,33 +329,39 @@ a {
   color: #000;
 }
 
-.logo {
-  margin-bottom: 50px !important;
-  margin-left: 30px;
-}
 
-.hero_image {
-  position: relative;
-}
-.hero_image p {
-  color: #00ff99;
-}
+/* ===============================
+   05. Menu and Panels
+================================== */
 
-.social_icon {
+#menu-item {
   position: absolute;
-  left: 25px;
-  top: 35%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: left 0.5s ease-in-out;
 }
 
-.social_icon a {
-  width: 45px;
-  height: 45px;
-  font-size: 14px;
-  line-height: 45px;
-  text-align: center;
-  display: inline-block;
-  border-radius: 5px;
-  margin-bottom: 15px;
+/* Hide menu by sliding it out to the left */
+#menu-item.hide {
+  left: -100%;
+}
+
+/* Panel default position: off-screen to the right */
+.slide-panel {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  transition: right 0.5s ease-in-out;
+  z-index: 2;
+  overflow-y: auto;
+}
+.slide-panel.active {
+  right: 0;
 }
 
 .menu_list_item {
@@ -417,7 +401,6 @@ a {
   top: 50%;
   transform: translateY(-50%);
 }
-
 .bg-1 {
   background: #FF7448;
 }
@@ -441,6 +424,83 @@ a {
 .bg-6 {
   background: #0F0933;
 }
+/* Responsive fix for menu buttons */
+#menu-item > div {
+  padding: 20px;
+  min-height: 120px;
+}
+
+.back_btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Headings */
+.slide-panel h4,
+.slide-panel h5 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Back link */
+#closeAbout {
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+#closeAbout:hover {
+  color: #28c76f;
+}
+
+/* Scrollbar (optional for cleaner scroll) */
+.slide-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.slide-panel::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+.logo {
+  margin-bottom: 50px !important;
+  margin-left: 30px;
+}
+
+
+/* ===============================
+   06. Hero Section
+================================== */
+
+.hero_image {
+  position: relative;
+}
+.hero_image p {
+  color: #00ff99;
+}
+
+.social_icon {
+  position: absolute;
+  left: 25px;
+  top: 35%;
+}
+
+.social_icon a {
+  width: 45px;
+  height: 45px;
+  font-size: 14px;
+  line-height: 45px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+
+/* ===============================
+   07. About Section
+================================== */
 
 .slide-panel p {
   font-size: 16px;
@@ -463,6 +523,11 @@ a {
 .light-mode .slide-panel strong {
   color: #111;
 }
+
+
+/* ===============================
+   08. Service Section
+================================== */
 
 .single_service {
   background: linear-gradient(91deg, rgba(4, 16, 15, 0.75) 0.91%, rgba(0, 149, 71, 0.75) 192.09%);
@@ -495,6 +560,11 @@ a {
 .light-mode .single_service span {
   color: #111;
 }
+
+
+/* ===============================
+   09. Career Section
+================================== */
 
 .timeline-wrapper {
   position: relative;
@@ -597,6 +667,10 @@ a {
   transform: translateX(-50%);
 }
 
+
+/* ===============================
+   10. Portfolio Section
+================================== */
 .portfolio_img {
   padding-top: 28px;
 }
@@ -680,12 +754,21 @@ a {
   letter-spacing: -0.16px;
 }
 
+
+/* ===============================
+   11. Client Section
+================================== */
 .client_content {
   padding-top: 20px;
 }
 .client_content .client_cta {
   font-size: 24px;
 }
+
+
+/* ===============================
+   12. Contact Section
+================================== */
 
 .contact-section {
   text-align: center;
@@ -772,6 +855,10 @@ a {
   color: #c0c0c0;
 }
 
+
+/* ===============================
+   13. Footer
+================================== */
 footer {
   padding-top: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -792,6 +879,11 @@ footer {
 .light-mode .contact-info-bar .label {
   color: #111 !important;
 }
+
+
+/* ===============================
+   14. Responsive (Media Queries)
+================================== */
 
 @media (max-width: 991px) {
   .social_icon {
